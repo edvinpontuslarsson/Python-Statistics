@@ -56,12 +56,10 @@ def getRange(numbers):
 def getStandardDeviation(numbers):
     totalSquaredDeviation = 0
 
-    i = 0
     for nr in numbers:
-        deviation = numbers[i] - getMean(numbers)
+        deviation = nr - getMean(numbers)
         squaredDeviation = deviation * deviation
         totalSquaredDeviation += squaredDeviation
-        i += 1
 
     return math.sqrt(totalSquaredDeviation / len(numbers))
 
